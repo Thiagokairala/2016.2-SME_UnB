@@ -1,4 +1,7 @@
 {% extends 'users/dashboard.html' %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_messages %}
 {% load i18n %}
 
 {% block title %}
@@ -68,9 +71,8 @@
                 </label>
               </div>
             </div>
-            <button type="submit" class="btn btn-success" onclick="return confirm('Voce tem certeza ?')" >{% trans "Register" %}</button>
+            <button type="submit" class="btn btn-success" onclick="return confirm('Voce tem certeza ?')" >{% trans "Edit" %}</button>
             <input type="hidden" name="original_email" value="{{user.email}}">
-            <button type="submit" class="btn btn-success" >{% trans "Register" %}</button>
             <a class="btn btn-primary" href="{% url 'users:list_user_edit' %}" role="button">{% trans "Cancel" %}</a>
           </form>
         </div>

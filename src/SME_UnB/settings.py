@@ -150,7 +150,7 @@ LANGUAGE_CODE = 'en-us'
 
 LANGUAGES = (
     ('en-us', u'English'),
-    ('pt-br', u'Portuguese'),
+    ('pt-br ', u'Portuguese'),
 )
 LOCALE_PATHS = ('locale',)
 
@@ -179,12 +179,12 @@ LOGGING = {
     },
     'handlers': {
         'default': {
-            'level':'INFO',
-            'class':'logging.handlers.RotatingFileHandler',
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
             'filename': PROJECT_DIR+'/logging.logging',
-            'maxBytes': 1024*1024*5, # 5 MB
+            'maxBytes': 1024*1024*5,# 5 MB
             'backupCount': 5,
-            'formatter':'standard',
+            'formatter': 'standard',
         },
     },
     'loggers': {
